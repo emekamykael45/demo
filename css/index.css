@@ -614,13 +614,19 @@ footer {
 
 @media screen and (max-width: 991px){
     .navbar{
-        padding-top: 12px;
-        padding-bottom: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         background: #FFFFFF;
     }
 
     .navbar.scrolled {
-        padding-top: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .navbar .logo img {
+        width: 130px;
+        height: 30px;
     }
 
     .navbar .navbar-nav {
@@ -641,7 +647,6 @@ footer {
         display: block;
         position: relative;
         margin: 0px;
-        margin-top: -2px;
         margin-left: 12px;
         width: 30px;
         transform: rotate(180deg);
