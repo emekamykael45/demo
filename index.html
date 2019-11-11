@@ -59,7 +59,7 @@
         <!-- Main Page Content Starts Here -->
         <main class="main" id="main">
             
-            <div id="home" class="section home">
+            <section id="home" class="section home">
                 <div class="home__left">
                     <h2>We Help the World Grow<br />the Food it needs</h2>
                     <p>Business is the activity of making one's living or making money by producing or buying and selling products (such as goods and services). Simply put, it is "any activity or enterprise entered into for profit.</p>
@@ -67,7 +67,7 @@
                 <div class="home__right">
                     <img class="home__right--img" src="images/who-we-are.png" alt="Home_Image">
                 </div>
-            </div>
+            </section>
 
             <div class="section">
                 <div class="email--div">
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div id="about" class="section about">
+            <section id="about" class="section about">
                 <div class="about__left">
                     <img class="about__left--img" src="images/who-we-are.png" alt="About_Image">
                 </div>
@@ -85,9 +85,9 @@
                     <hr />
                     <p>We are an organization investing in a desired future Africa. We support startups that focus on tech and solutions to real problems, consulting, research and development.</p>
                 </div>
-            </div>
+            </section>
 
-            <div id="portfolio" class="section portfolio">
+            <section id="portfolio" class="section portfolio">
                 <div class="portfolio__info">
                     <h2>Portfolio</h2>
                     <hr />
@@ -123,7 +123,7 @@
                     <p>Acuna is a stress free e-tutoring platform for post graduate students in business and finance.</p>
                     <a href="#portfolio" class="info__read--more">READ MORE</a>
                 </div>
-            </div>
+            </section>
 
             <div id="newsletter" class="section newsletter">
                 <div class="newsletter--div">
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div id="contact" class="section contact">
+            <section id="contact" class="section contact">
                 <div class="contact__left">
                     <h2>Get in touch</h2>
                     <hr />
@@ -168,7 +168,7 @@
                         <button type="submit" class="btn contact--form__send--btn">Send Message</button>
                     </form>
                 </div>
-            </div>
+            </section>
                 
         </main>
 
@@ -200,6 +200,7 @@
 
             
         
+        <!-- Navbar On Scroll Styling -->
         <script>
             $(function () {
                 $(document).scroll(function () {
@@ -207,6 +208,20 @@
                     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
                 });
             });
+        </script>
+
+        <!-- Active Section With Active Navlink -->
+        <script>
+            $(window).scroll(function() {
+                var scrollDistance = $(window).scrollTop();
+
+                $('section').each(function(i) {
+                    if ($(this).position().top <= scrollDistance) {
+                        $('.navbar .nav-item a.active').removeClass('active');
+                        $('.navbar .nav-item a').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
         </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
